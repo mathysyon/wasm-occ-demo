@@ -29,4 +29,6 @@ Installation and configuration:
     > http://localhost:8000/occt-webgl-sample.html
 ~~~~~
 
-![](GifOCCTGITHUB.gif)
+# Gallery
+
+<img src="doc/GifOCCTGITHUB.gif"/>
