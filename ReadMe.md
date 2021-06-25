@@ -20,6 +20,24 @@ Installation and configuration:
     > ${EMSDK}/fastcomp/emscripten/cmake/Modules/Platform/Emscripten.cmake
 ~~~~~
  5. Configure CMake for building this WebGL sample using *emsdk* with paths to OCCT and FreeType. Perform building and installation steps.
+~~~~~
+    Command prompt emscripten :
+    > emcmake cmake-gui
+    Check "Advanced"
+    Press "Configure"
+    - specify toolchaine file : C:/Users/User/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake
+    - freetype_DIR : C:\dev\freetype\freetype-master\install-wasm\lib\cmake\freetype
+    - CMAKE_INSTALL_PREFIX : C:/build-folder-location
+    - CMAKE_BUILD_TYPE : release
+    Press "Configure"
+    - OpenCASCADE_DIR : C:\OpenCASCADE-7.5.0-vc14-64\opencascade-7.5.0\install-wasm\lib\cmake\opencascade
+    Press "Configure"
+    Press "Generate"
+    Close CMake-Gui
+    Command prompt emscripten :
+    > cd "C:/build folder location"
+    > emmake make install
+~~~~~
  6. Navigate to installation folder and start web server from it; Python coming with *emsdk* can be used for this purpose:
 ~~~~~
     > python -m http.server
