@@ -56,7 +56,7 @@ Installation and configuration:
     > <Directory "build_folder_location">
 ~~~~~
 
- **8.** If you want to block all caching and not compress the .wasm file every time (for all attempts until the project is complete), create an .htaccess file at the root of your apache server and paste the code at the end of ReadMe.md into it (and skip step 7).
+ **8.** If you want to block all caching and not compress the .wasm file every time (for all attempts until the project is complete), create an .htaccess file at the root of your apache server and paste the code at the end of ReadMe.md into it (skip step 9).
 
  **9.** For the compression of the end .wasm file (in build folder) :
  * In "httpd.conf" :
