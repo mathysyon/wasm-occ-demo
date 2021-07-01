@@ -35,16 +35,33 @@ Installation and configuration:
     Press "Generate"
     Close CMake-Gui
     Command prompt emscripten :
-    > cd "C:/build folder location"
+    > cd "C:/build_folder_location"
     > emmake make install
 ~~~~~
- 6. Navigate to installation folder and start web server from it; Python coming with *emsdk* can be used for this purpose:
+ 6. Install Apache Lounge (for the local server):
 ~~~~~
-    > python -m http.server
+    > https://www.apachelounge.com/download/
 ~~~~~
- 8. Open compatible browser and enter path taking into account your web server settings:
+ 7. Open "httpd.conf" (C:\Apache24\conf).
 ~~~~~
-    > http://localhost:8000/occt-webgl-sample.html
+    Line 251 and 252, replace the base path with your build folder location  :
+    > DocumentRoot "build_folder_location"
+    > <Directory "build_folder_location">
+
+    Line 416, remove the "#" and add ".wasm" : 
+    > AddEncoding x-gzip .gz .tgz .wasm
+~~~~~
+ 8. To compress the .wasm file :
+~~~~~
+    > https://gzip.swimburger.net/  
+~~~~~
+ 10. Put the .gz file in the build_folder_location, delete the original .wasm, and rename the .gz file to .wasm :
+~~~~~
+    "occt-webgl-sample.wasm.gz" -> "occt-webgl-sample.wasm"
+~~~~~
+ 11. Run "httpd.exe" (C:\Apache24\bin), open compatible browser and enter path taking into account your web server settings :
+~~~~~
+    > http://localhost/occt-webgl-sample.html
 ~~~~~
 
 # Gallery
