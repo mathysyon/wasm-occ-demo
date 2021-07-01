@@ -51,7 +51,7 @@ Installation and configuration:
     Line 416, remove the "#" and add ".wasm" : 
     > AddEncoding x-gzip .gz .tgz .wasm
 ~~~~~
- 8. To compress the .wasm file :
+ 8. Compress the .wasm file :
 ~~~~~
     > https://gzip.swimburger.net/  
 ~~~~~
