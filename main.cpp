@@ -69,7 +69,7 @@ extern "C" void onFileDataRead (void* theOpaque, void* theBuffer, int theDataLen
        reader.TransferRoots();
        aShape = reader.OneShape();
      }
-  }   
+}   
 
   Handle(AIS_Shape) aShapePrs = new AIS_Shape (aShape);
   aShapePrs->SetMaterial (Graphic3d_NameOfMaterial_Silver);
