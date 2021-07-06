@@ -51,7 +51,7 @@ extern "C" void onFileDataRead (void* theOpaque, void* theBuffer, int theDataLen
 
   std::string extensionFile = filePath.extension(); 
   std::transform(extensionFile.begin(), extensionFile.end(), extensionFile.begin(), toupper); //Transforme minuscule en masjuscule
-  Message::DefaultMessenger()->Send (TCollection_AsciiString(extensionFile.c_str()), Message_Info); //Cout l'extension du fichier récupérer
+  Message::DefaultMessenger()->Send (TCollection_AsciiString(extensionFile.c_str()), Message_Info); //Cout l'extension du fichier récupéré
   
   if(extensionFile == ".BREP") 
   {
